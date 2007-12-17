@@ -14,7 +14,6 @@ Patch1:		byacc-1.9-automake.patch
 Patch2:		byacc-1.9-security.patch
 Patch3:		byacc-1.9-includes.patch
 Patch4:		byacc-20040328-no-recreate-unionfile.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Byacc (Berkeley Yacc) is a public domain LALR parser generator which
