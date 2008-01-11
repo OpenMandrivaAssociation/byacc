@@ -3,7 +3,7 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
 Version:	1.9
-Release:	%mkrel 21
+Release:	%mkrel 22
 License:	Public Domain
 Group:		Development/Other
 URL:		http://dickey.his.com/byacc/byacc.html
