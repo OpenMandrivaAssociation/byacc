@@ -1,19 +1,12 @@
-%define date	20040328
-
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	1.9
-Release:	%mkrel 24
+Version:	20090221
+Release:	%mkrel 1
 License:	Public Domain
 Group:		Development/Other
-URL:		http://dickey.his.com/byacc/byacc.html
+URL:		http://invisible-island.net/byacc/byacc.html
 # old source: ftp://ftp.cs.berkeley.edu/ucb/4bsd/
-Source:		ftp://invisible-island.net/byacc/byacc.tar.bz2
-Patch0:		byacc-1.9-fixmanpage.patch
-Patch1:		byacc-1.9-automake.patch
-Patch2:		byacc-1.9-security.patch
-Patch3:		byacc-1.9-includes.patch
-Patch4:		byacc-20040328-no-recreate-unionfile.patch
+Source:		ftp://invisible-island.net/byacc/byacc-%{version}.tgz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -25,12 +18,10 @@ install either this package or bison. Berkeley Yacc is regarded as a
 better parser, while bison is more widely used under GNU world.
 
 %prep
-
-%setup -q -n %{name}-%{date}
-%patch4 -p1 -b .unionfile
+%setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %check
@@ -59,10 +50,7 @@ fi
 rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
-%doc ACKNOWLEDGEMENTS NEW_FEATURES NOTES
-%doc NO_WARRANTY README
-%{_bindir}/byacc
+%defattr(0644,root,root,0755)
+%doc ACKNOWLEDGEMENTS CHANGES NEW_FEATURES NOTES NO_WARRANTY README
+%attr(0755,root,root) %{_bindir}/byacc
 %{_mandir}/man1/*
-
-
