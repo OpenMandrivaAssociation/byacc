@@ -1,7 +1,7 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20100216
-Release:	%mkrel 2
+Version:	20101229
+Release:	%mkrel 1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
