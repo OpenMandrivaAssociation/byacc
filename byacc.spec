@@ -1,6 +1,6 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20110908
+Version:	20120115
 Release:	%mkrel 1
 License:	Public Domain
 Group:		Development/Other
