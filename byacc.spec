@@ -1,13 +1,12 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20120115
-Release:	%mkrel 1
+Version:	20120526
+Release:	1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
 # old source: ftp://ftp.cs.berkeley.edu/ucb/4bsd/
 Source0:	ftp://invisible-island.net/byacc/byacc-%{version}.tgz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Byacc (Berkeley Yacc) is a public domain LALR parser generator which
@@ -28,8 +27,6 @@ better parser, while bison is more widely used under GNU world.
 make check
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std
 
 mv %{buildroot}%{_bindir}/{yacc,byacc}
@@ -46,11 +43,7 @@ fi
 %triggerpostun -- byacc <= 1.9-16mdk
 %{_sbindir}/update-alternatives --install %{_bindir}/yacc yacc %{_bindir}/byacc 20
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(0644,root,root,0755)
 %doc ACKNOWLEDGEMENTS CHANGES NEW_FEATURES NOTES NO_WARRANTY README
 %attr(0755,root,root) %{_bindir}/byacc
 %{_mandir}/man1/*
