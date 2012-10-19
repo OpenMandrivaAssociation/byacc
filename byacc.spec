@@ -1,12 +1,12 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20120526
+Version:	20121003
 Release:	1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
 # old source: ftp://ftp.cs.berkeley.edu/ucb/4bsd/
-Source0:	ftp://invisible-island.net/byacc/byacc-%{version}.tgz
+Source0:	ftp://invisible-island.net/byacc/byacc-%{version}.tar.gz
 
 %description
 Byacc (Berkeley Yacc) is a public domain LALR parser generator which
