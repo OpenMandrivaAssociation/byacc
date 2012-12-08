@@ -1,12 +1,12 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
 Version:	20121003
-Release:	2
+Release:	%mkrel 1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
 # old source: ftp://ftp.cs.berkeley.edu/ucb/4bsd/
-Source0:	ftp://invisible-island.net/byacc/byacc-%{version}.tar.gz
+Source0:	ftp://invisible-island.net/byacc/byacc-%{version}.tgz
 
 %description
 Byacc (Berkeley Yacc) is a public domain LALR parser generator which
@@ -40,10 +40,8 @@ if [ $1 -eq 0 ]; then
 	%{_sbindir}/update-alternatives --remove yacc %{_bindir}/byacc
 fi
 
-%triggerpostun -- byacc <= 1.9-16mdk
-%{_sbindir}/update-alternatives --install %{_bindir}/yacc yacc %{_bindir}/byacc 20
-
 %files
+%defattr(0644,root,root,0755)
 %doc ACKNOWLEDGEMENTS CHANGES NEW_FEATURES NOTES NO_WARRANTY README
 %attr(0755,root,root) %{_bindir}/byacc
 %{_mandir}/man1/*
