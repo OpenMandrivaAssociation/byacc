@@ -1,7 +1,7 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20121003
-Release:	%mkrel 1
+Version:	20130304
+Release:	1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
@@ -41,7 +41,6 @@ if [ $1 -eq 0 ]; then
 fi
 
 %files
-%defattr(0644,root,root,0755)
 %doc ACKNOWLEDGEMENTS CHANGES NEW_FEATURES NOTES NO_WARRANTY README
 %attr(0755,root,root) %{_bindir}/byacc
 %{_mandir}/man1/*
