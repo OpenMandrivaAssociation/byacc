@@ -1,7 +1,7 @@
 Summary:	A public domain Yacc parser generator
 Name:		byacc
-Version:	20130304
-Release:	9
+Version:	20150711
+Release:	1
 License:	Public Domain
 Group:		Development/Other
 URL:		http://invisible-island.net/byacc/byacc.html
@@ -20,7 +20,7 @@ better parser, while bison is more widely used under GNU world.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %check
@@ -37,7 +37,7 @@ ln -s yacc.1 %{buildroot}%{_mandir}/man1/byacc.1
 
 %preun
 if [ $1 -eq 0 ]; then
-	%{_sbindir}/update-alternatives --remove yacc %{_bindir}/byacc
+    %{_sbindir}/update-alternatives --remove yacc %{_bindir}/byacc
 fi
 
 %files
