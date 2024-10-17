@@ -4,7 +4,7 @@ Version:	20240109
 Release:	1
 License:	Public Domain
 Group:		Development/Other
-URL:		http://invisible-island.net/byacc/byacc.html
+URL:		https://invisible-island.net/byacc/byacc.html
 # old source: ftp://ftp.cs.berkeley.edu/ucb/4bsd/
 Source0:	https://invisible-mirror.net/archives/byacc/byacc-%{version}.tgz
 Requires(post,preun):	chkconfig
