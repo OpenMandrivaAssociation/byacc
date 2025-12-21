@@ -9,6 +9,11 @@ URL:		https://invisible-island.net/byacc/byacc.html
 Source0:	https://invisible-mirror.net/archives/byacc/byacc-%{version}.tgz
 Requires(post,preun):	chkconfig
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Byacc (Berkeley Yacc) is a public domain LALR parser generator which
 is used by many programs during their build process.
